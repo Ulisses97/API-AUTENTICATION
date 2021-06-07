@@ -2,7 +2,7 @@
   <img width="115" height="100%" src="https://image.flaticon.com/icons/png/512/1465/1465558.png" alt="API TOKEN"></a>
 </p>
 
-<h3 align="center">API-AUTENTICATION - MongoDB - Bcrypt</h3>
+<h3 align="center">API-AUTENTICATION - MongoDB - JWT - Bcrypt</h3>
 
 <div align="center">
 
@@ -61,5 +61,12 @@ routes.get('/usuarios', login.obrigatorio, userController.listarUsuarios);
 ```java
 routes.get('/usuarios/:id', login.obrigatorio,userController.listarUsuarioId);
 ```
+
+## Print Banco de dados
+
+#### Podemos notar que o Bcrypt faz a criptografia da senha para uma senha muito mais segura, mesmo assim conseguimos comparar com a senha que o usuario informou no cadastro pois, o BCrypt adicionar um hash na senha original no momento do login e compara com a senha que está no banco de dados.
+
+<img width="100%" height="100%" src="./printbd.png" alt="Banco de Dados"></a>
+
 <footer><p>Feito com o ♥ por <a href="https://www.instagram.com/ulisses.brandao/">Ulisses Brandão</a>👋</p>
 <p>☕Bora tomar um café e conversar melhor?</p></footer>
