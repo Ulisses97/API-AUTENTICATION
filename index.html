@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auth-LogoAli</title>
+</head>
+<body>
+  <form class="formulario"  method="post">
+    <input type="text" name="name" placeholder="Digite seu Nome">
+    <input type="text" name="email" placeholder="Digite seu e-mail">
+    <input type="text" name="password" id="" placeholder="Digite sua senha">
+    <!-- <input onclick="handleClick()" type="submit" name="acao" value="Enviar"> -->
+  </form>
+  <button onclick="handleClick()" >ENVIAR</button>
+  <script>
+
+    async function handleClick(){
+    let name = document.querySelector('.formulario input[name=name]').value
+    let email = document.querySelector('.formulario input[name=email]').value
+    let password = document.querySelector('.formulario input[name=password]').value
+    //  console.log(email, password);
+
+    alert(JSON.stringify({name, email, password}))
+
+     const req = fetch('http://192.168.0.111:5050/api/teste',{
+       method: 'POST',
+       header:{
+         Accept: 'application/json',
+         'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name,email,password})
+     }).catch((err)=>{ console.log('Deu erro na bagaça')} )
+     
+    }
+
+     
+    // dunga@logoali.com
+
+  </script>
+
+</body>
+</html>
